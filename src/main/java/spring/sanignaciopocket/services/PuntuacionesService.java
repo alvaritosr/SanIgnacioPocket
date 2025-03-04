@@ -21,7 +21,7 @@ public class PuntuacionesService
 
     public List<PuntuacionesDTO> getAll() throws Exception
     {
-        List<Puntuaciones> Puntuaciones = puntuacionesRepository.findAll();
+        List<Puntuaciones> Puntuaciones = puntuacionesRepository.findTop10ByQuery();
 
         if (Puntuaciones.isEmpty())
         {
