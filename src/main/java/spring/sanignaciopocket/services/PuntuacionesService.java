@@ -21,14 +21,14 @@ public class PuntuacionesService
 
     public List<PuntuacionesDTO> getAll() throws Exception
     {
-        List<Puntuaciones> Puntuaciones = puntuacionesRepository.findTop10ByQuery();
+        List<Puntuaciones> puntuaciones = puntuacionesRepository.findTop10ByQuery();
 
-        if (Puntuaciones.isEmpty())
+        if (puntuaciones.isEmpty())
         {
             throw new Exception("No se encontraron Puntuaciones");
         }
 
-        return Puntuaciones.stream().map(this::returnDTO).collect(Collectors.toList());
+        return puntuaciones.stream().map(this::returnDTO).collect(Collectors.toList());
     }
 
     public PuntuacionesDTO guardar(PuntuacionesDTO PuntuacionesDTO)

@@ -13,7 +13,7 @@ import spring.sanignaciopocket.services.PuntuacionesService;
 
 import java.util.List;
 
-@Controller
+@RestController
 @NoArgsConstructor
 @AllArgsConstructor
 @RequestMapping("/puntuaciones")
