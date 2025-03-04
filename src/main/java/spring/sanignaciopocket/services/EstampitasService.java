@@ -19,7 +19,8 @@ public class EstampitasService
     @Autowired
     private IEstampitasRepository estampitasRepository;
 
-    public List<EstampitasDTO> getAll() throws Exception {
+    public List<EstampitasDTO> getAll() throws Exception
+    {
         List<Estampitas> estampitas = estampitasRepository.findAll();
 
         if (estampitas.isEmpty())
@@ -30,7 +31,8 @@ public class EstampitasService
         return estampitas.stream().map(this::returnDTO).collect(Collectors.toList());
     }
 
-    public EstampitasDTO returnDTO(Estampitas estampitas) {
+    public EstampitasDTO returnDTO(Estampitas estampitas)
+    {
         EstampitasDTO dto = new EstampitasDTO();
         dto.setId(estampitas.getId());
         dto.setNombre(estampitas.getNombre());
