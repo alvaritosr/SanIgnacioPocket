@@ -27,4 +27,4 @@ RUN ls -l target/
 EXPOSE 8080
 
 # Ejecuta la aplicación
-CMD ["java", "-jar", "target/meatballBackend-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "target/SanIgnacioPocket-0.0.1-SNAPSHOT.jar"]
