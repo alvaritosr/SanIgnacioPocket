@@ -19,9 +19,9 @@ public class Estampitas
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "nombre")
+    @Column(name = "nombre", length = 1000)
     private String nombre;
 
-    @Column(name = "imagen")
+    @Column(name = "imagen", length = 1000)
     private String imagen;
 }
